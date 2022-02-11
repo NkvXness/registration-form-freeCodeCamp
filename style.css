@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root {
-    --select-border: #777;
-    --select-focus: blue;
-    --select-arrow: var(--select-border);
-}
-
 *,
 *::before,
 *::after {
@@ -43,6 +37,10 @@ body::before {
     padding: 25px 30px;
     border-radius: 5px;
     z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    background: radial-gradient(at 50% 0%, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.3));
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .title h1 {
@@ -59,7 +57,7 @@ body::before {
 }
 
 .title h1::before {
-    background: linear-gradient(135deg, hsl(267, 25%, 27%), hsl(320, 44%, 49%));
+    background: linear-gradient(135deg, hsl(267, 25%, 27%), hsla(320, 44%, 49%, 0.4));
     content: '';
     display: block;
     height: 3px;
@@ -68,7 +66,7 @@ body::before {
 }
 
 .title h1::after {
-    background: linear-gradient(135deg, hsl(320, 44%, 49%), hsl(267, 25%, 27%));
+    background: linear-gradient(135deg, hsla(320, 44%, 49%, 0.4), hsl(267, 25%, 27%));
     content: '';
     display: block;
     position: absolute;
@@ -106,19 +104,27 @@ body::before {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-left: 15px;
     font-size: 14px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
 }
 
 .input-box input:focus,
 .input-box input:valid {
-    border-color: hsl(266, 18%, 32%);
+    border-color: hsla(266, 17%, 31%, 0.16);
 }
 
 /* -------------------------SELECT STYILING------------------------- */
+
 select {
     display: none;
     appearance: none;
@@ -137,21 +143,22 @@ select {
     cursor: pointer;
 }
 
-.select-box {
+.select-container {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
 .custom-select {
-    background: #fff;
-    color: #757575;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
     max-height: 0;
     width: 100%;
     opacity: 0;
     transition: all 0.4s;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
     overflow: hidden;
     order: 1;
 }
@@ -159,12 +166,11 @@ select {
 .selected {
     height: 45px;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 8px;
-    color: #757575;
+    color: rgba(255, 255, 255, 0.3);
     font-size: 14px;
     position: relative;
     order: 0;
@@ -183,44 +189,35 @@ select {
     transition: all 0.4s;
 }
 
-.select-box .custom-select.active {
+.select-container .custom-select.active {
     max-height: 240px;
     opacity: 1;
-    /*overflow-y: scroll;*/
+    overflow-y: scroll;
 }
 
-.select-box .custom-select.active+.selected::after {
+.select-container .custom-select.active::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.select-container .custom-select.active + .selected::after {
     transform: rotateX(180deg);
-    top: -14px;
+    top: -11px;
 }
 
-/*
-.select-box .custom-select::-webkit-scrollbar {
-    width: 8px;
-    background: #0d141f;
-    border-radius: 0 8px 8px 0;
-}
-
-.select-box .custom-select::-webkit-scrollbar-thumb {
-    background: #525861;
-    border-radius: 0 8px 8px 0;
-}
-*/
-
-.select-box .option,
-.selected {
+.select-container .option, .selected {
     padding: 12px 15px;
     cursor: pointer;
 }
 
-.select-box .option:hover {
-    background: #414b57;
+.select-container .option:hover {
+    background: hsla(266, 17%, 31%, 0.14);
 }
 
-.select-box label {
+.select-container label {
     cursor: pointer;
 }
 
-.select-box .option .radio {
+.select-container .option .radio {
     display: none;
 }
