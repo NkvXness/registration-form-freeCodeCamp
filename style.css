@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, hsl(267, 25%, 27%), hsl(320, 44%, 49%));
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('g.svg');
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.6;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.title h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+    width: 200px;
+    padding-bottom: 13px;
+    position: relative;
+}
+
+.title h1::before {
+    background: linear-gradient(135deg, hsl(267, 25%, 27%), hsl(320, 44%, 49%));
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+
+.title h1::after {
+    background: linear-gradient(135deg, hsl(320, 44%, 49%), hsl(267, 25%, 27%));
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+#description {
+    text-align: center;
+}
+
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.user-details .input-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: hsl(266, 18%, 32%);
+}
+
+/* -------------------------SELECT STYILING------------------------- */
+select {
+    display: none;
+    appearance: none;
+    background-image: url(./down-arrow.svg);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: auto 40%;
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+}
+
+.select-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.custom-select {
+    background: #fff;
+    color: #757575;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    height: 45px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    margin-bottom: 8px;
+    color: #757575;
+    font-size: 14px;
+    position: relative;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("./down-arrow.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 0;
+    top: 15px;
+    transition: all 0.4s;
+}
+
+.select-box .custom-select.active {
+    max-height: 240px;
+    opacity: 1;
+    /*overflow-y: scroll;*/
+}
+
+.select-box .custom-select.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -14px;
+}
+
+/*
+.select-box .custom-select::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .custom-select::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+*/
+
+.select-box .option,
+.selected {
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>freeCodeCamp Survey</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title"><h1 id="title">Registration</h1></div>
+        <p id="description">Frontend Web Development Course</p>
+        <form id="survey-form" action="">
+            <div class="user-details">
+                <div class="input-box">
+                    <label for="name" id="name-label" class="details">Full Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <label for="email" id="email-label" class="details">Email</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your number" required>
+                </div>
+                <div class="input-box">
+                    <label for="number" id="number-label" class="details">Age</label>
+                    <input id="number" type="number" placeholder="18" min="18" max="100" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <label for="dropdown" class="details">Educational Status</label>
+                    <div class="select-box">
+                        <div class="custom-select">
+                            <select id="dropdown">
+                                <option value="0">Selection:</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="radio-details">
+                <span class="radio-title">Something to choose</span>
+                <div class="category">
+                    <label for="">
+                        <input type="radio" name="choose" value="black">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                    <label for="">
+                        <input type="radio" name="choose" value="black">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                    <label for="">
+                        <input type="radio" name="choose" value="black">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox-details">
+                <span class="checkbox-title">Something to choose</span>
+                <div class="category">
+                    <label for="">
+                        <input type="checkbox" name="features" value="white">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="features" value="white">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="features" value="white">
+                        <span class="radio-title">HZ</span>
+                    </label>
+                </div>
+            </div>
+            <div class="textarea-details">
+                <span class="textarea-title">Something to write</span>
+                <br>
+                <textarea name="comments" rows="7" cols="40"></textarea>
+            </div>
+            <div class="button">
+                <input id="submit" type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript" src="./main.js"></script>
+</html>

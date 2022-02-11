@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "labelText": "Entrant"
+    },
+    {
+        "id": "2",
+        "labelText": "Student"
+    },
+    {
+        "id": "3",
+        "labelText": "Student(bachelor)"
+    },
+    {
+        "id": "4",
+        "labelText": "Student(master)"
+    },
+    {
+        "id": "5",
+        "labelText": "Graduate"
+    },
+    {
+        "id": "6",
+        "labelText": "Other"
+    }
+]
