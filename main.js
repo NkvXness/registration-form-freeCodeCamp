@@ -1,5 +1,5 @@
 let customElement = document.querySelector('.custom-select');
-let cE = document.querySelector('.select-box');
+let cE = document.querySelector('.select-container');
 
 let newOption = document.createElement('div');
 let newOptionSpan = document.createElement('span');
@@ -25,26 +25,21 @@ for(let i = 0; i < 6; i++){
     newItemOption.appendChild(newInput);
     newItemOption.appendChild(newlabel);
 
-    fetch('select.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        appendData(data);
-    })
-    .catch(function (err) {
-        console.log('error: ' + err);
-    });
+}
 
-    function appendData(data) {
+fetch('select.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    appendData(data);
+});
 
-        for (let i = 0; i < data.length; i++) {
-            let innerLabel = document.querySelector("label");
-            innerLabel.innerHTML = data[i].labelText;
-            
-        }
+function appendData(data) {
+    for (let j = 0; j < data.length; j++) {
+        let innerLabel = document.getElementsByClassName("label");
+        innerLabel[j].innerHTML += data[j].labelText;
     }
-
 }
 
 const selected = document.querySelector(".selected");
