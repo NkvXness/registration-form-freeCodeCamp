@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <title>freeCodeCamp Survey</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="title"><h1 id="title">Registration</h1></div>
+        <div class="title">
+            <h1 id="title">Registration</h1>
+        </div>
         <p id="description">Frontend Web Development Course</p>
         <form id="survey-form" action="">
             <div class="user-details">
@@ -38,56 +42,54 @@
                     <div class="select-container">
                         <div class="custom-select">
                             <select id="dropdown">
-                                <option value="0">Selection:</option>
-                                <option value="">1</option>
-                                <option value="">1</option>
-                                <option value="">1</option>
-                                <option value="">1</option>
-                                <option value="">1</option>
-                                <option value="">1</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="radio-details">
-                <span class="radio-title">Something to choose</span>
+                <span class="radio-title">Do you want to subscribe to our Newsletter?</span>
                 <div class="category">
-                    <label for="">
-                        <input type="radio" name="choose" value="black">
-                        <span class="radio-title">HZ</span>
-                    </label>
-                    <label for="">
-                        <input type="radio" name="choose" value="black">
-                        <span class="radio-title">HZ</span>
-                    </label>
-                    <label for="">
-                        <input type="radio" name="choose" value="black">
-                        <span class="radio-title">HZ</span>
-                    </label>
+                    <input type="radio" name="choose" value="yes" id="yes">
+                    <label class="circle" for="yes">Yes</label>
+                    <input type="radio" name="choose" value="no" id="no">
+                    <label class="circle" for="no">No</label>
+                    <input type="radio" name="choose" value="maybe" id="maybe">
+                    <label class="circle" for="maybe">Maybe</label>
                 </div>
             </div>
             <div class="checkbox-details">
-                <span class="checkbox-title">Something to choose</span>
+                <span class="checkbox-title">What other courses would you like to take?</span>
                 <div class="category">
-                    <label for="">
-                        <input type="checkbox" name="features" value="white">
-                        <span class="radio-title">HZ</span>
-                    </label>
-                    <label for="">
-                        <input type="checkbox" name="features" value="white">
-                        <span class="radio-title">HZ</span>
-                    </label>
-                    <label for="">
-                        <input type="checkbox" name="features" value="white">
-                        <span class="radio-title">HZ</span>
-                    </label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="courses" value="JavaScipt" id="JavaScipt">
+                        <label class="box" for="JavaScipt">JavaScipt</label>
+                        <input type="checkbox" name="courses" value="PHP" id="PHP">
+                        <label class="box" for="PHP">PHP</label>
+                        <input type="checkbox" name="courses" value="Python" id="Python">
+                        <label class="box" for="Python">Python</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="courses" value="Flutter" id="Flutter">
+                        <label class="box" for="Flutter">Flutter</label>
+                        <input type="checkbox" name="courses" value="React" id="React">
+                        <label class="box" for="React">React</label>
+                        <input type="checkbox" name="courses" value="C++" id="C++">
+                        <label class="box" for="C++">C++</label>
+                    </div>
                 </div>
             </div>
             <div class="textarea-details">
-                <span class="textarea-title">Something to write</span>
+                <span class="textarea-title">Any comments or suggestions</span>
                 <br>
-                <textarea name="comments" rows="7" cols="40"></textarea>
+                <textarea class="textarea-box" name="comments"></textarea>
             </div>
             <div class="button">
                 <input id="submit" type="submit" value="Register">
@@ -97,4 +99,5 @@
 </body>
 
 <script type="text/javascript" src="./main.js"></script>
+
 </html>
