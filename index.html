@@ -10,91 +10,93 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="title">
-            <h1 id="title">Registration</h1>
-        </div>
-        <p id="description">Frontend Web Development Course</p>
-        <form id="survey-form" action="">
-            <div class="user-details">
-                <div class="input-box">
-                    <label for="name" id="name-label" class="details">Full Name</label>
-                    <input id="name" type="text" placeholder="Enter your name" required>
-                </div>
-                <div class="input-box">
-                    <label for="email" id="email-label" class="details">Email</label>
-                    <input id="email" type="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input type="text" placeholder="Enter your number" required>
-                </div>
-                <div class="input-box">
-                    <label for="number" id="number-label" class="details">Age</label>
-                    <input id="number" type="number" placeholder="18" min="18" max="100" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Password</span>
-                    <input type="text" placeholder="Enter your password" required>
-                </div>
-                <div class="input-box">
-                    <label for="dropdown" class="details">Educational Status</label>
-                    <div class="select-container">
-                        <div class="custom-select">
-                            <select id="dropdown">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+    <div class="wrapper">
+        <div class="container">
+            <div class="title">
+                <h1 id="title">Registration</h1>
+            </div>
+            <p id="description">Frontend Web Development Course</p>
+            <form id="survey-form" action="">
+                <div class="user-details">
+                    <div class="input-box">
+                        <label for="name" id="name-label" class="details">Full Name</label>
+                        <input id="name" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email" id="email-label" class="details">Email</label>
+                        <input id="email" type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="number" id="number-label" class="details">Age</label>
+                        <input id="number" type="number" placeholder="18" min="18" max="100" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="text" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="dropdown" class="details">Educational Status</label>
+                        <div class="select-container">
+                            <div class="custom-select">
+                                <select id="dropdown">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="radio-details">
-                <span class="radio-title">Do you want to subscribe to our Newsletter?</span>
-                <div class="category">
-                    <input type="radio" name="choose" value="yes" id="yes">
-                    <label class="circle" for="yes">Yes</label>
-                    <input type="radio" name="choose" value="no" id="no">
-                    <label class="circle" for="no">No</label>
-                    <input type="radio" name="choose" value="maybe" id="maybe">
-                    <label class="circle" for="maybe">Maybe</label>
-                </div>
-            </div>
-            <div class="checkbox-details">
-                <span class="checkbox-title">What other courses would you like to take?</span>
-                <div class="category">
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="courses" value="JavaScipt" id="JavaScipt">
-                        <label class="box" for="JavaScipt">JavaScipt</label>
-                        <input type="checkbox" name="courses" value="PHP" id="PHP">
-                        <label class="box" for="PHP">PHP</label>
-                        <input type="checkbox" name="courses" value="Python" id="Python">
-                        <label class="box" for="Python">Python</label>
-                    </div>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="courses" value="Flutter" id="Flutter">
-                        <label class="box" for="Flutter">Flutter</label>
-                        <input type="checkbox" name="courses" value="React" id="React">
-                        <label class="box" for="React">React</label>
-                        <input type="checkbox" name="courses" value="C++" id="C++">
-                        <label class="box" for="C++">C++</label>
+                <div class="radio-details">
+                    <span class="radio-title">Do you want to subscribe to our Newsletter?</span>
+                    <div class="category">
+                        <input type="radio" name="choose" value="yes" id="yes">
+                        <label class="circle" for="yes">Yes</label>
+                        <input type="radio" name="choose" value="no" id="no">
+                        <label class="circle" for="no">No</label>
+                        <input type="radio" name="choose" value="maybe" id="maybe">
+                        <label class="circle" for="maybe">Maybe</label>
                     </div>
                 </div>
-            </div>
-            <div class="textarea-details">
-                <span class="textarea-title">Any comments or suggestions</span>
-                <br>
-                <textarea class="textarea-box" name="comments"></textarea>
-            </div>
-            <div class="button">
-                <input id="submit" type="submit" value="Register">
-            </div>
-        </form>
+                <div class="checkbox-details">
+                    <span class="checkbox-title">What other courses would you like to take?</span>
+                    <div class="category">
+                        <div class="checkbox-container">
+                            <input type="checkbox" name="courses" value="JavaScipt" id="JavaScipt">
+                            <label class="box" for="JavaScipt">JavaScipt</label>
+                            <input type="checkbox" name="courses" value="PHP" id="PHP">
+                            <label class="box" for="PHP">PHP</label>
+                            <input type="checkbox" name="courses" value="Python" id="Python">
+                            <label class="box" for="Python">Python</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" name="courses" value="Flutter" id="Flutter">
+                            <label class="box" for="Flutter">Flutter</label>
+                            <input type="checkbox" name="courses" value="React" id="React">
+                            <label class="box" for="React">React</label>
+                            <input type="checkbox" name="courses" value="C++" id="C++">
+                            <label class="box" for="C++">C++</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="textarea-details">
+                    <span class="textarea-title">Any comments or suggestions</span>
+                    <br>
+                    <textarea class="textarea-box" name="comments"></textarea>
+                </div>
+                <div class="button">
+                    <input id="submit" type="submit" value="Register">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
