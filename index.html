@@ -16,27 +16,48 @@
                 <h1 id="title">Registration</h1>
             </div>
             <p id="description">Frontend Web Development Course</p>
-            <form id="survey-form" action="">
+            <form id="survey-form" action="/">
                 <div class="user-details">
                     <div class="input-box">
                         <label for="name" id="name-label" class="details">Full Name</label>
-                        <input id="name" type="text" placeholder="Enter your name" required>
+                        <input id="name" type="text" placeholder="Enter your name">
                     </div>
                     <div class="input-box">
-                        <label for="email" id="email-label" class="details">Email</label>
-                        <input id="email" type="email" placeholder="Enter your email" required>
+                        <div class="placeholderBox">
+                            <div class="flexLabelError">
+                                <label for="email" id="email-label" class="details">Email</label>
+                                <span class="errorMessage">Please enter a valid email</span>
+                            </div>
+                            <input id="email" type="text" placeholder="Enter your email">
+                            <div class="emailPass checkClass"></div>
+                        </div>
                     </div>
                     <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your number" required>
+                        <div class="placeholderBox">
+                            <div class="flexLabelError">
+                                <span class="details">Phone Number</span>
+                                <span class="errorMessage">Not a phone number</span>
+                            </div>
+                            <input id="phoneNumber" type="text" placeholder="Enter your number">
+                            <div class="emailPass checkClass"></div>
+                        </div>
                     </div>
                     <div class="input-box">
-                        <label for="number" id="number-label" class="details">Age</label>
-                        <input id="number" type="number" placeholder="18" min="18" max="100" required>
+                        <div class="placeholderBox">
+                            <div class="flexLabelError">
+                                <label for="number" id="number-label" class="details">Age</label>
+                                <span class="errorMessage">You must be over 18 years old</span>
+                            </div>
+                            <input id="number" type="number" placeholder="18">
+                            <div class="emailPass checkClass"></div>
+                        </div>
                     </div>
                     <div class="input-box">
-                        <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password" required>
+                        <div class="togglePass">
+                            <span class="details">Password</span>
+                            <input  type="password" placeholder="Enter your password" id="password">
+                            <div id="toggle"></div>
+                        </div>
                     </div>
                     <div class="input-box">
                         <label for="dropdown" class="details">Educational Status</label>
